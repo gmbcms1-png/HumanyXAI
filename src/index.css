@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply overflow-x-hidden w-full;
+  }
+}
+
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+}
+
+/* Base button styles */
+.magnetic-btn {
+  @apply relative overflow-hidden transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)];
+  transform: scale(1);
+}
+
+.magnetic-btn:hover {
+  transform: scale(1.03);
+}
+
+.magnetic-btn .bg-slide {
+  @apply absolute inset-0 bg-black translate-y-[101%] transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)];
+  z-index: 0;
+}
+
+.magnetic-btn:hover .bg-slide {
+  @apply translate-y-0;
+}
+
+.magnetic-btn span {
+  @apply relative z-10 transition-colors duration-500;
+}
+
+.magnetic-btn:hover span {
+  @apply text-white;
+}
+
+.magnetic-btn.accent-btn .bg-slide {
+  @apply bg-dark;
+}
+
+.magnetic-btn.dark-btn .bg-slide {
+  @apply bg-accent;
+}
+
+.link-hover {
+  @apply transition-transform duration-300 inline-block;
+}
+
+.link-hover:hover {
+  @apply -translate-y-[1px];
+}
+
+/* Custom scrollbar for typewriter */
+.typewriter-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.typewriter-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.typewriter-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
