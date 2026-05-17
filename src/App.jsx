@@ -170,7 +170,7 @@ const Shuffler = () => {
   return (
     <div className="bg-white rounded-[2rem] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-dark/5 relative h-[400px] overflow-hidden flex flex-col">
       <div className="mb-6 z-10 relative">
-        <h3 className="font-heading font-bold text-2xl mb-2">Short Time-to-Revenue</h3>
+        <h3 className="font-heading font-bold text-2xl mb-2">AI Agent</h3>
         <p className="font-heading text-dark/70 text-sm">We start sending on Day 1.</p>
       </div>
       
